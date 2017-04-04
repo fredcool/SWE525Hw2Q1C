@@ -1,0 +1,15 @@
+git remote add origin https://github.com/fredcool/SWE525Hw2Q1C.git
+
+git pull origin master
+
+git fetch --all
+
+Bare repository: A bare repository is nothing but the .git folder itself i.e. the contents of a bare repository is same as the contents of .git folder inside your local working repository. Use bare repository on a remote server to allow multiple contributors to push their work.
+
+Difference between bare repo and normal repo: They are structured a bit differently from working directories. First off, bare repos contain no working or checked out copy of your source files. And second, bare repos store git revision history of your repo in the root folder of your repository instead of in a .git subfolder. 
+
+When to use bare repo: The purpose is for team collaboration. If you work with a team and need a place to share changes to a repo, then you will want to create a bare repo in centralized place where all users can push their changes. Because git is a distributed version control system, no one will directly edit files in the shared centralized repository. Instead developers will clone the shared bare repo, make changes locally in their working copies of the repo, then push back to the shared bare repo to make their changes available to other users. Because no one ever makes edits directly to files in the shared bare repo, a working tree is not needed. In fact the working tree would just get in way and cause conflicts as users push code to the repository. This is why bare repositories exist and have no working tree.
+
+
+git push origin other
+
